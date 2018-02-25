@@ -38,3 +38,27 @@ To extend the previous example, you could run the command in the backround (i.e.
 ```
 sh -c 'while true; do /path/to/fetch-git-info.sh; sleep 600; done' &
 ```
+
+## 2. Run git-commit-timeline.sh to load the required shell functions
+
+```
+/path/to/git-commit-timeline.sh
+```
+
+Now the functions that read the temporary files being generated in Step 1 are loaded up. Once fetch-git-info.sh has run one full cycle (usually takes a few minutes depending on your repository size), then you can run the following command to see a histogram of your git commits.
+
+```
+gitcommitchecker
+```
+
+If all worked, then you should see a histogram appear.
+
+If you'd like to run this on a loop, the command is as follows (default: checks every five minutes):
+
+```
+rungitcommitchecker
+```
+
+If all worked, then you should see a histogram appear every five minutes showing a timeline of your latest commits.
+
+## 3. Explanation of output
