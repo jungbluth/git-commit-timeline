@@ -12,7 +12,7 @@ Make sure the following can be found in your path.
 
 # Running
 
-##1. Run fetch-git-info.sh on some time interval (e.g every 10 minutes). This can be done in several ways:
+## 1. Run fetch-git-info.sh on some time interval (e.g every 10 minutes). This can be done in several ways:
 
 ###  * Set up a cron job
 
