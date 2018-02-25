@@ -1,5 +1,5 @@
 # git-commit-timeline
-Utility to show a histogram plot timeline of commits to your githup repositories
+Utility to show a histogram plot timeline of commits to your githup repositories. By default, it is set to show the last 45 days of activity, which fits nicely in a narrow terminal pane (~8-10 cm on-screen.)
 
 ![alt text](https://github.com/js040/git-commit-timeline/blob/master/doc/image1.png)
 
@@ -53,7 +53,7 @@ gitcommitchecker
 
 If all worked, then you should see a histogram appear.
 
-If you'd like to run this on a loop, the command is as follows (default: checks every five minutes):
+If you'd like to run this on a loop, the command is as follows (default: checks every 20 minutes):
 
 ```
 rungitcommitchecker
@@ -62,3 +62,5 @@ rungitcommitchecker
 If all worked, then you should see a histogram appear every five minutes showing a timeline of your latest commits.
 
 ## 3. Explanation of output
+
+![alt text](https://github.com/js040/git-commit-timeline/blob/master/doc/image2.png)

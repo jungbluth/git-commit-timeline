@@ -9,5 +9,5 @@ gitcommitchecker () {
 
 
 rungitcommitchecker () {
-while true; do clear; gitcommitchecker; sleep 300; clear; done
+while true; do clear; gitcommitchecker; sleep 1200; clear; done
 }
