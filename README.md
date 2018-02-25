@@ -12,7 +12,7 @@ Make sure the following can be found in your path.
 
 # Running
 
-## 1. Run fetch-git-info.sh on some time interval (e.g every 10 minutes). This can be done in several ways:
+## 1. Run fetch-git-info.sh on some time interval (e.g every 10 minutes). Note: this script requires that you input the parent folder for all of your git repositories. This can be done in several ways:
 
 ###  * Set up a cron job
 
@@ -24,19 +24,19 @@ env EDITOR=nano crontab -e
 and then to run fetch-git-info.sh every 10 minutes
 
 ```
-*/10 * * * * /path/to/fetch-git-info.sh > /dev/null 2>&1
+*/10 * * * * /path/to/fetch-git-info.sh /Application/ResearchSoftware/ > /dev/null 2>&1
 ```
 
 ###  * Run in an endless loop
 
 You could open a shell and run this command to check every 10 minutes
 ```
-while true; do /path/to/fetch-git-info.sh; sleep 600; done
+while true; do /path/to/fetch-git-info.sh /Application/ResearchSoftware/; sleep 600; done
 ```
 
 To extend the previous example, you could run the command in the backround (i.e. you would have to manually kill the process or session to stop the command)
 ```
-sh -c 'while true; do /path/to/fetch-git-info.sh; sleep 600; done' &
+sh -c 'while true; do /path/to/fetch-git-info.sh /Application/ResearchSoftware/; sleep 600; done' &
 ```
 
 ## 2. Run git-commit-timeline.sh to load the required shell functions

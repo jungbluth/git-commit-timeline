@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
+if [ -n $1 ] ; then
+  gitdirs=$1
+  cd $gitdirs
+else
+    echo "Indicate the parent folder for all of your github repositories"
+    exit 1
+fi
+
 mkdir -p /tmp/gitcommit
-cd /Applications/ResearchSoftware
 if [ -s /tmp/gitcommit/tmp ]; then
 find /tmp/gitcommit/list2 -maxdepth 1 -mmin +1 -type f > /tmp/gitcommit/tmp
 
