@@ -31,7 +31,7 @@ and then to run fetch-git-info.sh every 10 minutes
 
 You could open a shell and run this command to check every 10 minutes
 ```
-while true; do /path/to/fetch-git-info.sh /Application/ResearchSoftware/; sleep 600; done
+while true; do /path/to/fetch-git-info.sh /Applications/ResearchSoftware/; sleep 600; done
 ```
 
 To extend the previous example, you could run the command in the backround (i.e. you would have to manually kill the process or session to stop the command)
