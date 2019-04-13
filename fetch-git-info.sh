@@ -9,7 +9,7 @@ else
 fi
 
 mkdir -p ~/.tmp/gitcommit
-if [ -s ~/.tmp/gitcommit~/.tmp ]; then
+if [ -s ~/.tmp/gitcommit.tmp ]; then
 find ~/.tmp/gitcommit/list2 -maxdepth 1 -mmin +1 -type f > ~/.tmp/gitcommit.tmp
 
 if [ -s ~/.tmp/gitcommit.tmp ]; then
