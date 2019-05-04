@@ -15,7 +15,7 @@ mkdir -p ~/.tmp/gitcommit
 find . -name ".git" | sed 's/..//' | sed 's/\/.*$//' > ~/.tmp/gitcommit/list
 for line in $(cat ~/.tmp/gitcommit/list); do
   cd $line
-  for i in {180..1}; do
+  for i in {45..1}; do
     git log --after="$(date -j -v-${i}d +"%Y-%m-%d %T")" --before="$(date -j -v-$(($i-1))d +"%Y-%m-%d %T")" | grep -c "jungbluth" #need to fix how date is done
   done > ~/.tmp/gitcommit/${line}.tmp
   commitstoday=$(tail -1 ~/.tmp/gitcommit/${line}.tmp)
