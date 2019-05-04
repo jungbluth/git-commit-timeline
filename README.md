@@ -12,54 +12,23 @@ Make sure the following can be found in your path.
 
 # Running
 
-## 1. Run fetch-git-info.sh on some time interval (e.g every 10 minutes). Note: this script requires that you input the parent folder for all of your git repositories. This can be done in several ways:
+## 1. Set the parent folder for all your git repositories (assumption is that one parent folder contains them all)
 
-###  * Set up a cron job
-
-In OSX, you need to go to 
-```
-env EDITOR=nano crontab -e
-```
-
-and then to run fetch-git-info.sh every 10 minutes
-
-```
-*/10 * * * * /path/to/fetch-git-info.sh /Applications/ResearchSoftware/ > /dev/null 2>&1
-```
-
-###  * Run in an endless loop
-
-You could open a shell and run this command to check every 10 minutes
-```
-while true; do /path/to/fetch-git-info.sh /Applications/ResearchSoftware/; sleep 600; done
-```
-
-To extend the previous example, you could run the command in the backround (i.e. you would have to manually kill the process or session to stop the command)
-```
-sh -c 'while true; do /path/to/fetch-git-info.sh /Application/ResearchSoftware/; sleep 600; done' &
-```
 
 ## 2. Run git-commit-timeline.sh to load the required shell functions
+
 
 ```
 /path/to/git-commit-timeline.sh
 ```
 
-Now the functions that read the temporary files being generated in Step 1 are loaded up. Once fetch-git-info.sh has run one full cycle (usually takes a few minutes depending on your repository size), then you can run the following command to see a histogram of your git commits.
+## 3. Run rungitcommitchecker and provide the path to your github repositories as the first (and only argument)
 
 ```
-gitcommitchecker
+rungitcommitchecker /path/to/github-repositories
 ```
 
-If all worked, then you should see a histogram appear.
-
-If you'd like to run this on a loop, the command is as follows (default: checks every 20 minutes):
-
-```
-rungitcommitchecker
-```
-
-If all worked, then you should see a histogram appear every five minutes showing a timeline of your latest commits.
+If all worked, then you should see a histogram appear every ten minutes showing a timeline of your latest commits.
 
 ## 3. Explanation of output
 
