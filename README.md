@@ -24,7 +24,7 @@ env EDITOR=nano crontab -e
 and then to run fetch-git-info.sh every 10 minutes
 
 ```
-*/10 * * * * /path/to/fetch-git-info.sh /Application/ResearchSoftware/ > /dev/null 2>&1
+*/10 * * * * /path/to/fetch-git-info.sh /Applications/ResearchSoftware/ > /dev/null 2>&1
 ```
 
 ###  * Run in an endless loop
